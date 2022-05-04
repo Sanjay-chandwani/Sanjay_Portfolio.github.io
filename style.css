@@ -1,0 +1,457 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}	
+
+html
+{
+	scroll-behavior: smooth;
+}
+body
+{
+	font-family: 'Nunito', sans-serif;
+	/*background-color: #191A23;*/
+	background-color: #171321;
+	color: white;
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+::-webkit-scrollbar-track-piece  
+{
+	background-color: rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb:vertical
+{
+	height: 30px;
+	background-color: rgba(234, 84, 85, 0.8);
+}
+
+::-webkit-scrollbar-thumb:horizontal
+{
+	height: 30px;
+	background-color: rgba(234, 84, 85, 0.8);
+
+} 
+
+
+/* Start of about me*/
+
+
+#bganimation
+{   display: flex;
+	justify-content: center;
+	padding: 3rem;
+	width: 88%;
+}
+
+.column div
+{
+	display: flex;
+	flex-direction: column;
+	margin-left: 10rem;
+	margin-bottom: 10rem;
+	height: 4.2px;
+	width: 4.2px;
+	border-radius: 50%;
+	background-color: rgba(169,169,169,0.4);
+}
+
+.column:first-of-type div
+{
+	margin-left: 0px;
+}
+
+.column:nth-of-type(even)
+{
+	animation: evenDots 8.5s linear infinite;
+}
+
+@keyframes evenDots
+{
+	0%
+	{
+		transform: translateY(0vh);
+	}
+
+	100%
+	{
+		transform: translateY(12.5vh);
+	}
+}
+
+.column:nth-of-type(odd)
+{
+	animation: oddDots 8.5s linear infinite;
+}
+
+@keyframes oddDots
+{
+	0%
+	{
+		transform: translateY(0vh);
+	}
+
+	100%
+	{
+		transform: translateY(-12.5vh);
+	}
+}
+
+#aboutme
+{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 52%;
+	margin: 0 auto;
+	padding: 5rem;
+	margin-top: -57rem;
+}
+
+#aboutme span:nth-of-type(1)
+{
+	font-weight: bold;
+}
+
+#myimg 
+{
+	height: 243px;
+	width: 243px;
+	border: 0px solid grey;
+	border-radius: 50%;
+	transition: all 0.3s;
+	position: relative;
+	z-index: 999;
+	box-shadow: 0px 0px 6px 0.8px;
+}
+
+#myimg:hover 
+{
+	transform: scale(1.30);
+	margin-bottom: 2.2rem;
+	/*margin-top: -0.5rem;*/
+}
+
+#myimg img
+{
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+
+#aboutme h1
+{
+	word-spacing: 1px;
+	letter-spacing: 1.4px;
+	padding-top: 1rem;
+	font-size: 35px;
+	width: 48rem;
+	color: #ffffffdb;
+	text-align: center;
+}
+
+#intro /*intro is p*/
+{
+	width: 46rem;
+	letter-spacing: 1px;
+	word-spacing: 1px;
+	text-align: center;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	font-size: 21px;
+	color: #e3e3e3e3;
+	font-family: 'Nunito', sans-serif;
+}
+
+#intro a
+{
+	text-decoration: none;
+	color: #D67E3E;
+	color: #ea5455;
+	padding-bottom: 2px;
+	font-weight: 950;
+	position: relative;
+}
+
+#intro a:before 
+{
+	content: '';
+	height: 1px;
+	width: 0%;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	background-color: #ea5455;
+	transition: all 0.3s ease;
+}
+
+#intro a:hover:before
+{
+	width: 100%;
+}
+
+#aboutme h2
+{
+	letter-spacing: 1.7px;
+	font-size: 33px;
+	position: relative;
+}
+
+#aboutme  h2 i
+{
+
+	color: #e3e3e3;
+	font-size: 22px;
+	opacity: 0.9;
+	position: absolute;
+	top: 21px;
+	left: 108px;
+}
+
+.skills
+{    
+	display: flex;
+	justify-content: center;
+	width: 50rem;
+	/* margin: 0 auto; */
+	padding: 1.5px;
+	margin-top: 1.5rem;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.skills span
+{
+	background-color: rgba(169,169,169,0.3);
+	padding: 10px 12px;
+	margin-right: 1.1rem;
+	border-radius: 8%;
+}   
+
+/* End of about me*/
+
+
+/*start of Education section*/
+#education
+{
+	padding-top: 2rem;
+	color: #e3e3e3;
+
+}
+#educontainer
+{
+	display: flex;
+	justify-content: center;
+	width: 83%;
+	margin: 0 auto;
+	padding: 3rem;
+	height: 27rem;
+	background-color: #191A23;
+	font-size: 21.5px;
+}
+
+#school_clg, #internships
+{
+	position: relative;
+}
+
+
+#school_clg
+{
+	padding-right: 20rem;
+	display: flex;
+	flex-direction: column;
+	height: 20rem;
+	justify-content: space-between;
+	padding-right: 14rem;
+	margin-left: 4rem;
+}
+
+#school_clg p:nth-of-type(2){
+	padding-bottom: 4.8rem;
+}
+
+#school_clg h1
+{
+	text-align: center;
+	margin-right: 6rem;
+	padding-bottom: 20px;
+	font-size: 28px;
+}
+
+#school_clg h1 i
+{
+	margin-left: 4.2px;
+}
+
+.heading
+{
+	/*color:#ff2e63;*/
+	color:#f95959;
+	font-size: 21.5px;
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+
+#internships
+{
+	/*padding-right: 20rem;*/
+	display: flex;
+	flex-direction: column;
+	height: 20rem;
+	justify-content: space-between;
+	margin-left: 187px;
+}
+
+#internships h1
+{
+	text-align: center;
+	margin-right: 2rem;
+	font-size: 28px;
+}
+
+#fullstack
+{
+	padding-bottom: 2.5rem;
+}
+
+#internships h1 i
+{
+	margin-left: 5.5px;
+	padding-bottom: 20px;	
+}
+
+
+#line1 ,#line2
+{
+	height: 2px;
+	width: 17rem;
+	background-color: white;
+	transform: rotate(90deg);
+	position: absolute;
+}
+
+#line1
+{
+	top: 197px;
+	left: -171px;
+}
+
+#line1:before
+{
+	position: absolute;
+	content: '';
+	top: -7px;
+	left: 0px;
+	background-color: white;
+	border: 1px solid white;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+}
+
+#line1:after
+{
+	position: absolute;
+	content: '';
+	top: -7px;
+	left: 166px;
+	background-color: white;
+	border: 1px solid white;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+}
+
+#line2
+{
+	top: 197px;
+	right: 165px;
+}
+
+#line2:before
+{
+	position: absolute;
+	content: '';
+	top: -7px;
+	left: 0px;
+	background-color: white;
+	border: 1px solid white;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+}
+#line2:after
+{
+	position: absolute;
+	content: '';
+	top: -7px;
+	left: 172px;
+	background-color: white;
+	border: 1px solid white;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+}
+
+
+
+/*education section ends here*/
+
+#portfolio h1
+{
+	text-align: center;
+	letter-spacing: 1.7px;
+	font-size: 33px;
+	padding-top: 1rem;
+	position: relative;
+}
+
+#portfolio h1 i
+{
+	color: #e3e3e3;
+	font-size: 22px;
+	opacity: 0.9;
+	position: absolute;
+	top: 35px;
+	right: 668px;
+}
+
+#portfolio_container
+{
+	display: flex;
+	justify-content: center;
+	width: 88%;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding:3rem;
+}
+
+#portfolio_container div
+{
+	height: 273px;
+	width: 329px;
+	margin-right: 4.7rem;
+	margin-bottom: 4.7rem;
+}
+
+#portfolio_container div:nth-of-type(6) ,#portfolio_container div:nth-of-type(3)
+{
+	margin-right: 0;
+}
+
+#portfolio_container div img
+{
+	height: 100%;
+	width: 100%;
+	border-radius: 2%;
+}
+
+
